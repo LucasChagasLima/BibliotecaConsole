@@ -14,14 +14,16 @@ namespace BibliotecaConsole
         public int AnoPublicacao { get; set; }
         public bool Disponivel { get; set; } = true;
 
+        // Exibe detalhes formatados do livro
         public void ExibirDetalhes()
         {
             Console.WriteLine($"ID: {Id}");
             Console.WriteLine($"Título: {Titulo}");
             Console.WriteLine($"Autor: {Autor}");
             Console.WriteLine($"Ano: {AnoPublicacao}");
-            Console.WriteLine($"Disponível: {(Disponivel ? "Sim" : "Não")}");
+            Console.WriteLine($"Disponível: {(Disponivel ? "Sim" : "Não")}\n");
         }
     }
 }
+
 

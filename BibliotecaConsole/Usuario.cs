@@ -8,12 +8,24 @@ namespace BibliotecaConsole
 {
     public class Usuario
     {
-        private int id { get; set; }
-        private string nome { get; set; }
-        private string email { get; set; }
-        private string password { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public List<Livro> LivrosEmprestados { get; set; } = new List<Livro>();
 
+        // Exibe livros emprestados pelo usuário
+        public void ExibirLivrosEmprestados()
+        {
+            if (LivrosEmprestados.Count == 0)
+            {
+                Console.WriteLine("Nenhum livro emprestado.");
+                return;
+            }
 
-
+            foreach (var livro in LivrosEmprestados)
+            {
+                Console.WriteLine($"- {livro.Titulo} (ID: {livro.Id})");
+            }
+        }
     }
 }
