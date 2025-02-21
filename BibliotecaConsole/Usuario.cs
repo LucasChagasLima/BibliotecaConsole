@@ -18,13 +18,13 @@ namespace BibliotecaConsole
         {
             if (LivrosEmprestados.Count == 0)
             {
-                Console.WriteLine("Nenhum livro emprestado.");
+                Console.WriteLine("Nenhum livro emprestado."); // Retorno caso não haja emprestimo
                 return;
             }
 
             foreach (var livro in LivrosEmprestados)
             {
-                Console.WriteLine($"- {livro.Titulo} (ID: {livro.Id})");
+                Console.WriteLine($"- {livro.Titulo} (ID: {livro.Id})"); // Lista com livros emprestados 
             }
         }
     }
